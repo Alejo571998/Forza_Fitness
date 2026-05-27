@@ -419,6 +419,127 @@ body{
     box-shadow:
     0 0 30px rgba(200,255,0,0.18);
 }
+.nutrition-stats{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+
+    margin-bottom:22px;
+}
+
+
+/* PILLS */
+
+.stat-pill{
+    position:relative;
+
+    overflow:hidden;
+
+    min-width:115px;
+
+    padding:14px 16px;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(200,255,0,0.12),
+        rgba(200,255,0,0.03)
+    );
+
+    border:1px solid rgba(200,255,0,0.25);
+
+    backdrop-filter:blur(10px);
+
+    text-align:center;
+
+    transition:0.35s ease;
+}
+
+
+/* EFECTO PREMIUM */
+
+.stat-pill::before{
+    content:"";
+
+    position:absolute;
+    top:-40px;
+    right:-40px;
+
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+
+    background:rgba(200,255,0,0.08);
+
+    filter:blur(20px);
+}
+
+
+/* SECONDARY */
+
+.stat-pill.secondary{
+    border:1px solid rgba(255,255,255,0.08);
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,0.04),
+        rgba(255,255,255,0.01)
+    );
+}
+
+
+/* NUMERO */
+
+.stat-number{
+    position:relative;
+    z-index:2;
+
+    display:block;
+
+    color:#c8ff00;
+
+    font-size:1.2rem;
+    font-weight:900;
+
+    letter-spacing:1px;
+}
+
+
+/* LABEL */
+
+.stat-label{
+    position:relative;
+    z-index:2;
+
+    display:block;
+
+    margin-top:5px;
+
+    color:#ffffff;
+
+    font-size:0.62rem;
+    font-weight:700;
+
+    letter-spacing:1.4px;
+
+    opacity:0.85;
+}
+
+
+/* HOVER */
+
+.menu-card:hover .stat-pill{
+    transform:translateY(-3px);
+
+    border-color:#c8ff00;
+
+    box-shadow:
+    0 0 20px rgba(200,255,0,0.12);
+}
 .card-image{
     position:relative;
     width:100%;
